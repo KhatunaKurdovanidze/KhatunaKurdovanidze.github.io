@@ -17,7 +17,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # About Section
 subtitle: Data Analyst/Data Scientist <span style="color:#f58506"> Portfolio </span>
 location: "Rochester, UK"
-home: "https://khatunakurdovanidze.github.io/"
+home_url: "https://khatunakurdovanidze.github.io/"
 #resume_url: /docs/CV_Data_Scientist_KhatunaKurdovanidze.pdf
 avatar_image: /img/presentingKhatuna.jfif
 
