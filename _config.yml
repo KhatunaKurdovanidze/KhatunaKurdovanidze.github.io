@@ -17,12 +17,11 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # About Section
 subtitle: Data Analyst/Data Scientist <span style="color:#f58506"> Portfolio </span>
 location: "Rochester, UK"
-#resume_url: /docs/CV_Data_Scientist_KhatunaKurdovanidze.pdf
+resume_url: /docs/CV_Data_Scientist_KhatunaKurdovanidze.pdf
 avatar_image: /img/presentingKhatuna.jfif
 
 #-------------------------------
 # Contact links
-home:"https://khatunakurdovanidze.github.io/"
 linkedln: "https://www.linkedin.com/in/khatunakurdovanidze/" # Add your linkedln handle
 github: "https://github.com/KhatunaKurdovanidze"  # Add your github handle
 
