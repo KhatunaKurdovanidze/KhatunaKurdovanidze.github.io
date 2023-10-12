@@ -24,6 +24,7 @@ avatar_image: /img/presentingKhatuna.jfif
 # Contact links
 linkedln: "https://www.linkedin.com/in/khatunakurdovanidze/" # Add your linkedln handle
 github: "https://khatunakurdovanidze.github.io"  # Add your github handle
+
 paginate: 16
 paginate_path: "/page/:num"
 
