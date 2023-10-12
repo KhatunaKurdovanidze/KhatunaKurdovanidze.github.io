@@ -10,7 +10,7 @@ plugins:
 # General Site Settings
 title: Khatuna Kurdovanidze
 description: "I am passionate about solving business problems using Data Science & Data Analytics. I systematically & creatively use my skillset to add tangible value to the team, the business, and the end-user. I have a UK MSc in Statistical Data Science, a Google Data Analyst Professional Certificate, and have recently completed a Data Analyst Experience Accelerator Programme. I live in the UK and have a settled status. Available for immediate start, willing to work remotely, if needed. I have a full UK driving licence and own transport."
-baseurl: "https://khatunakurdovanidze.github.io" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
@@ -24,7 +24,6 @@ avatar_image: /img/presentingKhatuna.jfif
 # Contact links
 linkedln: "https://www.linkedin.com/in/khatunakurdovanidze/" # Add your linkedln handle
 github: "https://khatunakurdovanidze.github.io"  # Add your github handle
-github: "https://github.com/KhatunaKurdovanidze"  # Add your github handle
 paginate: 16
 paginate_path: "/page/:num"
 
