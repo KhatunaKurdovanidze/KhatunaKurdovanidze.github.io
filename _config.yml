@@ -9,15 +9,14 @@ plugins:
 #-------------------------------
 # General Site Settings
 title: Khatuna Kurdovanidze
-description: "I hold a UK MSc in Statistical Data Science and a BA in Psychology. Since 2022, I have been continuously training to become a data analyst, honing my expertise in this field. I love solving problems using data and enjoy expressing my creativity by designing presentations and dashboards."
+description: "I am passionate about solving business problems using Data Science & Data Analytics. I systematically & creatively use my skillset to add tangible value to the team, the business, and the end-user. I have a UK MSc in Statistical Data Science, a Google Data Analyst Professional Certificate, and have recently completed a Data Analyst Experience Accelerator Programme. I live in the UK and have a settled status. Available for immediate start, willing to work remotely, if needed. I have a full UK driving licence and own transport."
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://khatunakurdovanidze.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
 # About Section
 subtitle: Data Analyst/Data Scientist <span style="color:#f58506"> Portfolio </span>
 location: "Rochester, UK"
-home_url: "https://khatunakurdovanidze.github.io/"
 #resume_url: /docs/CV_Data_Scientist_KhatunaKurdovanidze.pdf
 avatar_image: /img/presentingKhatuna.jfif
 
