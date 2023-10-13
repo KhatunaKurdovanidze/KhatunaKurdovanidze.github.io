@@ -89,6 +89,4 @@ From the data we have so far, we can see that it's not necessary to spend money 
 
 ---
 
-Most of the tools I have used for this project I have learnt from my instructor Andrew Jones, Data Science Infinity Course, <https://www.data-science-infinity.com/>
-
 Photo source: mika_baumeister/Unsplash
