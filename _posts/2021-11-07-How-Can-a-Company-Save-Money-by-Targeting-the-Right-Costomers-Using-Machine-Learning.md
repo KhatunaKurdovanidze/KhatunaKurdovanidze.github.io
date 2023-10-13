@@ -5,7 +5,7 @@ image: "/posts/markus_winkler_unsplash.jpg"
 tags: [Python, Random Forests, Classification Model]
 ---
 
-In this project we are helping the company reduce costs of the future campaigns by targeting only those customers who are more likely to sign up. We are using Machine Learning algorithm called ***Random Forests*** to find out which customers have high probability to sign up for the Delivery Club. We have correctly classified all customers into two groups with low and high probability of signing up. Now the company can contact only the second group and reduce marketing costs.
+In this project I helped the company reduce costs of the future campaigns by targeting only those customers who are more likely to sign up. I used Machine Learning algorithm called ***Random Forests*** to find out which customers have high probability to sign up for the Delivery Club. I have correctly classified all customers into two groups with low and high probability of signing up. Now the company can contact only the second group and reduce marketing costs.
 
 ---
 Data first! In order to be able to use a ML algorithm we should have collected data on cutromer's behaviour for at least some customers for a certain amount of time. In our example we have the data for 870 customers collected through a 3 months period.  
