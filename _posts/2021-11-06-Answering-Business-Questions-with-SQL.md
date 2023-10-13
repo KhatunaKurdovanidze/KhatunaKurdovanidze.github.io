@@ -5,7 +5,7 @@ image: "/posts/john_schnobrich_unsplash.jpg"
 tags: [SQL, Data Analysis]
 ---
 
-The aim of this project is to help the business answer questions about their total sales, best customers, and the total sales for each product area. We used ***SQL Workbench/J*** as it has two advantages. Firstly, it introduced the concept of accessing many records with one single command. Secondly, it eliminates the need to specify how to reach a record, e.g. with or without an index. This information can be used to support strategic decisions or to report latest results to stakeholders. In the future I want to learn ***Tableau*** and use it together with SQL for data visualisation.
+I used ***SQL Workbench/J*** to help the business answer questions about their total sales, best customers, and the total sales for each product area. This information can be used to support strategic decisions or to report latest results to stakeholders. This information can be used to support strategic decisions or to report latest results to stakeholders. In the future I want to learn ***Tableau*** and use it together with SQL for data visualisation.
 
 ---
 
