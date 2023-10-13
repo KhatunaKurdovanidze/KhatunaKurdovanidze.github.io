@@ -196,7 +196,6 @@ OUTPUT:
 ![permutation_importance](/img/posts/permutation_importance.png "permutation_importance")
 
 ---
-Most of the tools I have used for this project I have learnt from my instructor Andrew Jones, Data Science Infinity Course, <https://www.data-science-infinity.com/>
 
 Photo source: markus_winkler/Unsplash
 
