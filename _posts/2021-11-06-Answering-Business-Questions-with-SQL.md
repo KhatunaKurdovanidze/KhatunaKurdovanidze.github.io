@@ -13,22 +13,13 @@ I used ***SQL Workbench/J*** to help the business answer questions about their t
 ###### SQL CODE:
 
 ```sql
-select
- b.product_area_name,
- sum(a.sales_cost) as total_sales
- 
-from 
- grocery_db.transactions a
- inner join grocery_db.product_areas b on a.product_area_id=b.product_area_id
- 
-where
- a.transaction_date between '2020-07-01' and '2020-07-31'
- 
-group by
- b.product_area_name
- 
-order by
-  total_sales desc;
+SELECT b.product_area_name,
+       SUM(a.sales_cost) AS total_sales
+FROM grocery_db.transactions a
+INNER JOIN grocery_db.product_areas b on a.product_area_id=b.product_area_id
+WHERE a.transaction_date BETWEEN '2020-07-01' AND '2020-07-31'
+GROUP BY b.product_area_name
+ORDER BY total_sales DESC;
 ```
 
 ###### RESULT 1:
@@ -38,52 +29,32 @@ order by
 ###### SQL CODE:
 
 ```sql
-select
- customer_id,
- sum(sales_cost) as total_sales,
- count(distinct(transaction_id)) as total_trans
- 
-from
- grocery_db.transactions
- 
-where 
- transaction_date between '2020-08-01' and '2020-08-31'
- 
-group by
- customer_id
- 
-having
- sum(sales_cost) > 500 and
- count(distinct(transaction_id)) >= 5;
+SELECT customer_id,
+       SUM(sales_cost) AS total_sales,
+       COUNT(distinct(transaction_id)) AS total_trans
+FROM grocery_db.transactions
+WHERE transaction_date BETWEEN '2020-08-01' AND '2020-08-31'
+GROUP BY customer_id
+HAVING SUM(sales_cost) > 500 AND COUNT(DISTINCT(transaction_id)) >= 5;
 ```
 ###### RESULT 2:
 ![sql2](/img/posts/sql2.png "sql2")
 
-#### Question 3: Returning data showing, for each ***product area name*** - the ***total sales***, and the percentage of ***overall sales*** that each product area makes up
+#### Question 3: Returning data showing, for each ***product area name*** - the ***total sales***, and the percentage of ***overall sales*** that each product area makes up using Common Table Expression (CTE)
 ###### SQL CODE:
 
 ```sql
-with sales as (
-select
- b.product_area_name,
- sum(a.sales_cost) as total_sales
- 
-from
- grocery_db.transactions a
- inner join grocery_db.product_areas b on a.product_area_id=b.product_area_id
- 
-group by
- b.product_area_name
- 
-)
-
-select
- product_area_name,
- total_sales,
- total_sales / (select sum(total_sales) from sales) as total_sales_pc
- 
-from 
- sales;
+WITH sales AS (
+SELECT b.product_area_name,
+       SUM(a.sales_cost) AS total_sales
+FROM grocery_db.transactions a
+INNER JOIN grocery_db.product_areas b ON a.product_area_id=b.product_area_id
+GROUP BY b.product_area_name
+ )
+SELECT product_area_name,
+       total_sales,
+       total_sales / (SELECT SUM(total_sales) FROM sales) AS total_sales_pc
+FROM sales;
 ```
 ###### RESULT 3:
 ![sql3](/img/posts/sql3.png "sql3")
