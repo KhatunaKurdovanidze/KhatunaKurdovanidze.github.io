@@ -5,7 +5,7 @@ image: "/posts/john_schnobrich_unsplash.jpg"
 tags: [SQL, Data Analysis]
 ---
 
-I used ***SQL Workbench/J*** to help the business answer questions about their total sales, best customers, and the total sales for each product area. This information can be used to support strategic decisions or to report latest results to stakeholders. This information can be used to support strategic decisions or to report latest results to stakeholders. In the future I want to learn ***Tableau*** and use it together with SQL for data visualisation.
+I used ***SQL Workbench/J*** to help the business answer questions about their total sales, best customers, and the total sales for each product area. This information can be used to support strategic decisions or to report latest results to stakeholders. This information can be used to support strategic decisions or to report latest results to stakeholders. 
 
 ---
 
@@ -16,7 +16,7 @@ I used ***SQL Workbench/J*** to help the business answer questions about their t
 SELECT b.product_area_name,
        SUM(a.sales_cost) AS total_sales
 FROM grocery_db.transactions a
-INNER JOIN grocery_db.product_areas b on a.product_area_id=b.product_area_id
+INNER JOIN grocery_db.product_areas b ON a.product_area_id=b.product_area_id
 WHERE a.transaction_date BETWEEN '2020-07-01' AND '2020-07-31'
 GROUP BY b.product_area_name
 ORDER BY total_sales DESC;
