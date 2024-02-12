@@ -113,7 +113,7 @@ ggplot(data=data)+geom_bar(mapping=aes(x=week_day_as_date, fill=rideable_type))+
 ggplot(data=data)+geom_bar(mapping=aes(x=rideable_type))+
   facet_grid(~member_casual)
 ```
-##### Step 5: Saving and importing data to Tableau for furthure analysis and creating visualisations and and interactive dashboard
+##### Step 5: Saving and importing data to Tableau for furthure analysis and creating visualisations and a dashboard
 
 ```r
 write.csv(data, "C:\\Users\\Owner\\My_bikes_2022.csv", row.names=FALSE)
