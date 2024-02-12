@@ -131,7 +131,7 @@ Casual riders took 1M less trips than annual members in 2022, but spent 23% more
 
 ##### Link to the Tableau dashboard
 
-<iframe src="https://public.tableau.com/app/profile/khatunakurdovanidze/viz/Bike-ShareCompanyCaseStudy/Dashboard1" width="WIDTH" height="HEIGHT" frameborder="0"></iframe>
+<iframe src="https://public.tableau.com/views/Bike-ShareCompanyCaseStudy/Dashboard1?:language=en-GB&:display_count=n&:origin=viz_share_link" width="WIDTH" height="HEIGHT" frameborder="0"></iframe>
 
 ---
 
