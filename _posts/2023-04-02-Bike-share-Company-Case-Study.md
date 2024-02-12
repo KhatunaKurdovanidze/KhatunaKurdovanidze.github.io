@@ -131,7 +131,8 @@ Casual riders took 1M less trips than annual members in 2022, but spent 23% more
 3) Targeted Marketing Strategy: Utilize the preference for electric and docked bikes among casual riders to place compelling ads promoting the benefits of an annual membership. This focused approach can attract more members, driving increased revenue
 
 ##### Link to the Tableau dashboard
-<iframe src="[YOUR_TABLEAU_DASHBOARD_URL](https://public.tableau.com/app/profile/khatunakurdovanidze/viz/Bike-ShareCompanyCaseStudy/Dashboard1)" width="WIDTH" height="HEIGHT" frameborder="0"></iframe>
+
+<iframe src="https://public.tableau.com/app/profile/khatunakurdovanidze/viz/Bike-ShareCompanyCaseStudy/Dashboard1" width="WIDTH" height="HEIGHT" frameborder="0"></iframe>
 
 ---
 
