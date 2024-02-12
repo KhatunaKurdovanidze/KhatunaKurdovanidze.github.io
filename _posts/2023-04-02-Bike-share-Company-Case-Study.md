@@ -125,8 +125,8 @@ Casual riders took 1M less trips than annual members in 2022, but spent 23% more
 
 
 ##### Reccomendations
-1) Recognizing the business potential in the trend of casual riders taking more and longer trips during weekends, it is recommended to create a dedicated weekend membership plan tailored to their preferences. This strategic initiative has the potential to not only cater to their needs but also contribute to increased revenue and customer loyalty
-2) Capitalizing on Long-term Engagement: Subsequently, there is an opportunity to leverage the engagement of weekend plan members by introducing an annual membership option to them. This marketing strategy can be reinforced by elucidating the wide-ranging benefits of the annual membership, thereby fostering sustained customer commitment and driving revenue growt
+1) Recognizing the business potential in the trend of casual riders taking more and longer trips during weekends, it is recommended to create a dedicated weekend membership plan tailored to their preferences. This strategic initiative has the potential to not only cater to their needs but also contribute to increased revenue and customer loyalty <br> 
+2) Capitalizing on Long-term Engagement: Subsequently, there is an opportunity to leverage the engagement of weekend plan members by introducing an annual membership option to them. This marketing strategy can be reinforced by elucidating the wide-ranging benefits of the annual membership, thereby fostering sustained customer commitment and driving revenue growth <br> 
 3) Targeted Marketing Strategy: Utilize the preference for electric and docked bikes among casual riders to place compelling ads promoting the benefits of an annual membership. This focused approach can attract more members, driving increased revenue
 
 ##### Link to the Tableau dashboard
