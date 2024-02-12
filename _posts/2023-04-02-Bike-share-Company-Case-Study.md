@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bike-share Company Case Study
+title: Bike-share Company Case Study Using R and Tableau
 image: "/posts/photo-bikes.jpg"
 tags: [R, RStudio,Tableau]
 ---
