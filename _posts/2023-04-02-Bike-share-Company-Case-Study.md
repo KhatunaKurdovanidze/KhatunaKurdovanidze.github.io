@@ -11,7 +11,7 @@ This is a case study I have done in order to obtain my Google Data Analyst Profe
 
 ##### Step 1: Importing required packages in RStudio
 
-# Load the packages
+###### Load the packages
 ``` r
 library(tidyverse)
 library(ggplot2)
@@ -21,7 +21,7 @@ library(ggplot2)
 Data was downloaded from the following 
 [link](https://divvy-tripdata.s3.amazonaws.com/index.html)
 
-# Load 12 datasets correspoding to 12 months
+###### Load 12 datasets correspoding to 12 months
 ``` r
 data1=read.csv("trips_jan_22.csv")
 data2=read.csv("trips_feb_22.csv")
@@ -38,11 +38,11 @@ data12=read.csv("trips_dec_22.csv")
 ```
 ##### Step 3: Data preparation
 
-# Union them in one dataset
+###### Union them in one dataset
 ``` r
 data=rbind(data1,data2,data3,data4,data5,data6,data7,data8,data9,data10,data11,data12)
 ```
-# View the new data
+###### View the new data
 ``` r
 head(data)
 colnames(data)
@@ -51,12 +51,12 @@ str(data)
 class(data$started_at)
 class(data$ended_at)
 ```
-# Load packages for data manipulation and handling dates and times
+###### Load packages for data manipulation and handling dates and times
 ``` r
 library("dplyr")
 library(lubridate)
 ```
-# Change date variable to date type
+###### Change date variable to date type
 ``` r
 data$started_at_as_date=dmy_hm(data$started_at)
 data$ended_at_as_date=dmy_hm(data$ended_at)
@@ -64,16 +64,16 @@ data$ended_at_as_date=dmy_hm(data$ended_at)
 class(data$started_at_as_date)
 class(data$ended_at_as_date)
 ```
-# Create a new variable ride_length_in_min for the ride duration in minutes
+###### Create a new variable ride_length_in_min for the ride duration in minutes
 ``` r
 data$ride_length_in_min=as.numeric(data$ended_at_as_date-data$started_at_as_date,
                                    units="mins")
 ```
-# Create a new variable week_day_as_date to see the week day of the start of the trips
+###### Create a new variable week_day_as_date to see the week day of the start of the trips
 ``` r
 data$week_day_as_date=wday(data$started_at_as_date,label=TRUE, abbr=TRUE)
 ```
-# Change categories of the rideable_type variable to classic, electric, and docked
+###### Change categories of the rideable_type variable to classic, electric, and docked
 ``` r
 data=data %>% 
   mutate(rideable_type=replace(rideable_type, rideable_type=="classic_bike", "classic"))
@@ -82,16 +82,16 @@ data=data %>%
 data=data %>% 
   mutate(rideable_type=replace(rideable_type, rideable_type=="docked_bike", "docked"))
 ```
-# View new data
+###### View new data
 ``` r
 View(data)
 ```
-# Load packages for summary statistics, cleaning, and preprocessing data
+###### Load packages for summary statistics, cleaning, and preprocessing data
 ``` r
 library(skimr)
 library(janitor)
 ```
-# Generating some summary statistics
+###### Generating some summary statistics
 ``` r
 skim_without_charts(data)
 data %>% 
@@ -99,14 +99,14 @@ data %>%
   summarise(mean(ride_length_in_min), min(ride_length_in_min), max(ride_length_in_min))
 ```
 
-# Filter data, keep only ride_length_in_min >= 3 minutes
+###### Filter data, keep only ride_length_in_min >= 3 minutes
 ``` r
 data=filter(data, ride_length_in_min>=3)
 data=filter(data, ride_length_in_min<=1440)
 ```
 ##### Step 3: Some descriptive statistics
 
-# Some stats
+###### Some stats
 ``` r
 data %>% 
   group_by(member_casual) %>% 
@@ -114,13 +114,13 @@ data %>%
 ```
 ##### Step 4: Creating some data visualisations
 
-# Create visualizations
+###### Create visualizations
 ``` r
 ggplot(data=data)+geom_bar(mapping=aes(x=week_day_as_date, fill=rideable_type))+
   facet_grid(~member_casual)
 ```
 
-# Plot bar charts for different riders (casual and member) and different rideable_type (classic, docked, electric)
+###### Plot bar charts for different riders (casual and member) and different rideable_type (classic, docked, electric)
 ``` r
 ggplot(data=data)+geom_bar(mapping=aes(x=rideable_type))+
   facet_grid(~member_casual)
