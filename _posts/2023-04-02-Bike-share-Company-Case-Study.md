@@ -16,8 +16,7 @@ library(ggplot2)
 ```
 
 ##### Step 2: Import Data
-Data was downloaded from the following link <iframe title="Data Source" width="1140" height="541.25" src="[https://app.powerbi.com/reportEmbed?reportId=67ccd2f0-b1b4-4995-afdb-9f1a65317abd&autoAuth=true&ctid=15830474-cef0-4326-88db-96e5ab019d8a](https://divvy-tripdata.s3.amazonaws.com/index.html)" frameborder="0" allowFullScreen="true"></iframe>
-
+Data was downloaded from the following [link] (https://divvy-tripdata.s3.amazonaws.com/index.html)
 ```r
 # Load 12 datasets for 12 months
 data1=read.csv("trips_jan_22.csv")
