@@ -1,14 +1,12 @@
 ---
 layout: post
 title: Bike-share Company Case Study
-image: "/posts/photo-bikeds.jpg"
+image: "/posts/photo-bikes.jpg"
 tags: [Python, Random Forests, Classification Model]
 ---
 
 This is a case study I have done for my Google Data Analyst Professional Certificate. Scenario: It's about Cyclistic, a bike-share company in Chicago. There are three plans available: Single Ride - $3.30/trip (one trip up to 30 minutes), Day Pass - $15/day (unlimited 3-hour rides in 24-hour period), and Annual Membership - $9/month ($108 billed upfront annually for unlimited 45-min rides). There are three types of bikes: classical, electric, and docked. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. My task is to answer the question "How do annual members and casual riders use Cyclistic bikes differently?" and come up with three recommendations based on my analysis. From these insights, the team will design a new marketing strategy to convert casual riders into annual members. Data: Cyclistic is a fictional company. The data has been made available by Motivate International Inc. I have chosen data from January 2022 to December 2022. 
 ---
-Data first! In order to be able to use a ML algorithm we should have collected data on cutromer's behaviour for at least some customers for a certain amount of time. In our example we have the data for 870 customers collected through a 3 months period.  
-
 
 ##### Step 1: Import required packages in RStudio
 ``` r
@@ -132,7 +130,7 @@ Casual riders took 1M less trips than annual members in 2022, but spent 23% more
 3) Targeted Marketing Strategy: Utilize the preference for electric and docked bikes among casual riders to place compelling ads promoting the benefits of an annual membership. This focused approach can attract more members, driving increased revenue
 
 ##### Link to the Tableau dashboard
-<iframe title="Bike-share Company Case Study" width="1140" height="541.25" src="[[https://app.powerbi.com/reportEmbed?reportId=67ccd2f0-b1b4-4995-afdb-9f1a65317abd&autoAuth=true&ctid=15830474-cef0-4326-88db-96e5ab019d8a](https://divvy-tripdata.s3.amazonaws.com/index.html)](https://public.tableau.com/app/profile/khatunakurdovanidze/viz/Bike-ShareCompanyCaseStudy/Dashboard1)https://public.tableau.com/app/profile/khatunakurdovanidze/viz/Bike-ShareCompanyCaseStudy/Dashboard1)" frameborder="0" allowFullScreen="true"></iframe>
+<div class='tableauPlaceholder' id='viz1707758617079' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bi&#47;Bike-ShareCompanyCaseStudy&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Bike-ShareCompanyCaseStudy&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bi&#47;Bike-ShareCompanyCaseStudy&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1707758617079');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1020px';vizElement.style.height='3427px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1020px';vizElement.style.height='3427px';} else { vizElement.style.width='100%';vizElement.style.height='3677px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 ---
 
 Photo source: Ankush Minda/Unsplash
