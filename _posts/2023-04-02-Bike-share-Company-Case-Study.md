@@ -9,14 +9,14 @@ This is a case study I have done for my Google Data Analyst Professional Certifi
 
 ---
 
-##### Step 1: Import required packages in RStudio
+##### Step 1: Importing required packages in RStudio
 ``` r
 # Load the packages
 library(tidyverse)
 library(ggplot2)
 ```
 
-##### Step 2: Import Data
+##### Step 2: Importing Data
 Data was downloaded from the following 
 [link](https://divvy-tripdata.s3.amazonaws.com/index.html)
 ```r
@@ -91,7 +91,7 @@ data %>%
 data=filter(data, ride_length_in_min>=3)
 data=filter(data, ride_length_in_min<=1440)
 ```
-##### Step 3: Descriptive statistics
+##### Step 3: Some descriptive statistics
 
 ```r
 # Some stats
@@ -101,7 +101,6 @@ data %>%
 
 ```
 ##### Step 4: Creating some data visualisations
-
 
 ```r
 # Create visualizations
@@ -114,18 +113,18 @@ ggplot(data=data)+geom_bar(mapping=aes(x=week_day_as_date, fill=rideable_type))+
 ggplot(data=data)+geom_bar(mapping=aes(x=rideable_type))+
   facet_grid(~member_casual)
 ```
-##### Step 5: Saving and importing data to Tableau for furthure analysis and creating visualisations and dashboard
+##### Step 5: Saving and importing data to Tableau for furthure analysis and creating visualisations and and interactive dashboard
 
 ```r
 write.csv(data, "C:\\Users\\Owner\\My_bikes_2022.csv", row.names=FALSE)
 ```
 
 
-##### Our Results
+##### Results
 Casual riders took 1M less trips than annual members in 2022, but spent 23% more time traveling with higher median and average trip duration. Annual members travel more often during weekdays (to work), while casual riders travel more often during the weekends (leisure). During weekdays, more annual members than casual riders start their trips at 8am, 12pm, and 5pm. Casual riders choose electric type more often, but ride classical type for longer, average trip time is bigger for docked type. My three recommendations are to create a weekend membership plan and market it to casual riders. Once a casual member subscribes and benefits from the weekend membership, market them an annual membership by showing them that it's actually beneficial for them. This could be done by sending them emails with their stats together with the offer and placing ads at dock stations and electric bikes because casual riders use them more
 
 
-##### Reccomendations
+##### My reccomendations
 1) Recognizing the business potential in the trend of casual riders taking more and longer trips during weekends, it is recommended to create a dedicated weekend membership plan tailored to their preferences. This strategic initiative has the potential to not only cater to their needs but also contribute to increased revenue and customer loyalty <br> 
 2) Capitalizing on Long-term Engagement: Subsequently, there is an opportunity to leverage the engagement of weekend plan members by introducing an annual membership option to them. This marketing strategy can be reinforced by elucidating the wide-ranging benefits of the annual membership, thereby fostering sustained customer commitment and driving revenue growth <br> 
 3) Targeted Marketing Strategy: Utilize the preference for electric and docked bikes among casual riders to place compelling ads promoting the benefits of an annual membership. This focused approach can attract more members, driving increased revenue
