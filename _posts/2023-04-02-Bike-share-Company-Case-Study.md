@@ -37,6 +37,11 @@ data11=read.csv("trips_nov_22.csv")
 data12=read.csv("trips_dec_22.csv")
 ```
 ##### Step 3: Data preparation
+###### Load packages for data manipulation and handling dates and times
+``` r
+library("dplyr")
+library(lubridate)
+```
 
 ###### Union them in one dataset
 ``` r
@@ -51,12 +56,7 @@ str(data)
 class(data$started_at)
 class(data$ended_at)
 ```
-###### Load packages for data manipulation and handling dates and times
-``` r
-library("dplyr")
-library(lubridate)
-```
-###### Change date variable to date type
+###### Changind variables started_at_as_date and ended_at_as_date to date type
 ``` r
 data$started_at_as_date=dmy_hm(data$started_at)
 data$ended_at_as_date=dmy_hm(data$ended_at)
