@@ -5,7 +5,7 @@ image: "/posts/photo-bikes.jpg"
 tags: [Python, Random Forests, Classification Model]
 ---
 
-This is a case study I have done for my Google Data Analyst Professional Certificate. Scenario: It's about Cyclistic, a bike-share company in Chicago. There are three plans available: Single Ride - $3.30/trip (one trip up to 30 minutes), Day Pass - $15/day (unlimited 3-hour rides in 24-hour period), and Annual Membership - $9/month ($108 billed upfront annually for unlimited 45-min rides). There are three types of bikes: classical, electric, and docked. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. My task is to answer the question "How do annual members and casual riders use Cyclistic bikes differently?" and come up with three recommendations based on my analysis. From these insights, the team will design a new marketing strategy to convert casual riders into annual members. Data: Cyclistic is a fictional company. The data has been made available by Motivate International Inc. I have chosen data from January 2022 to December 2022. 
+#This is a case study I have done for my Google Data Analyst Professional Certificate. Scenario: It's about Cyclistic, a bike-share company in Chicago. There are three plans available: Single Ride - $3.30/trip (one trip up to 30 minutes), Day Pass - $15/day (unlimited 3-hour rides in 24-hour period), and Annual Membership - $9/month ($108 billed upfront annually for unlimited 45-min rides). There are three types of bikes: classical, electric, and docked. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. My task is to answer the question "How do annual members and casual riders use Cyclistic bikes differently?" and come up with three recommendations based on my analysis. From these insights, the team will design a new marketing strategy to convert casual riders into annual members. Data: Cyclistic is a fictional company. The data has been made available by Motivate International Inc. I have chosen data from January 2022 to December 2022. 
 ---
 
 ##### Step 1: Import required packages in RStudio
@@ -16,7 +16,8 @@ library(ggplot2)
 ```
 
 ##### Step 2: Import Data
-Data was downloaded from the following [link] (https://divvy-tripdata.s3.amazonaws.com/index.html)
+Data was downloaded from the following 
+[link](https://divvy-tripdata.s3.amazonaws.com/index.html)
 ```r
 # Load 12 datasets for 12 months
 data1=read.csv("trips_jan_22.csv")
