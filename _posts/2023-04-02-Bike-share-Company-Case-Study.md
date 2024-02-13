@@ -68,7 +68,7 @@ class(data$ended_at_as_date)
 data$ride_length_in_min=as.numeric(data$ended_at_as_date-data$started_at_as_date,
                                    units="mins")
 ```
-###### Creating a new variable week_day_as_date to see the week day of the start of the trips
+###### Creating a new variable ***week_day_as_date*** to see the week day of the start of the trips
 ``` r
 data$week_day_as_date=wday(data$started_at_as_date,label=TRUE, abbr=TRUE)
 ```
@@ -81,8 +81,6 @@ data=data %>%
 data=data %>% 
   mutate(rideable_type=replace(rideable_type, rideable_type=="docked_bike", "docked"))
 ```
-
-###### Generating descriptive statistics
 ###### Load packages for summary statistics, cleaning, and preprocessing data
 ``` r
 library(skimr)
@@ -96,7 +94,7 @@ data %>%
   summarise(mean(ride_length_in_min), min(ride_length_in_min), max(ride_length_in_min))
 ```
 
-###### Filter data, keep only ride_length_in_min >= 3 minutes
+###### Filtering data, keeping only ride_length_in_min >= 3 minutes
 Because the variable ride_length_in_min has outliers, even some negative values and some very large values, after some research I limited this variable to 3-1440 minutes as less than 3 minutes can't be considered as a ride and more than 24 hours (1440 minutes) are not allowed by the company.
 ``` r
 data=filter(data, ride_length_in_min>=3)
