@@ -5,7 +5,7 @@ image: "/posts/photo-bikes.jpg"
 tags: [R, RStudio,Tableau]
 ---
 
-This is a case study I have done in order to obtain my Google Data Analyst Professional Certificate. Scenario: It's about Cyclistic, a bike-share company in Chicago. There are three types of bikes: classical, electric, and docked. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. My task was to answer the question "How do annual members and casual riders use Cyclistic bikes differently?" and come up with three recommendations based on my analysis. From these insights, the team will design a new marketing strategy to convert casual riders into annual members. Cyclistic is a fictional company. The data has been made available by Motivate International Inc. I have chosen data from January 2022 to December 2022. I used RStudio for data manupulation and Tableau to conduct the analysis and create visualisations and a dashboard.
+This is a case study I have done in order to obtain my ***Google Data Analyst Professional Certificate***. Scenario: It's about Cyclistic, a bike-share company in Chicago. There are three types of bikes: classical, electric, and docked. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. My task was to answer the question "How do annual members and casual riders use Cyclistic bikes differently?" and come up with three recommendations based on my analysis. From these insights, the team will design a new marketing strategy to convert casual riders into annual members. Cyclistic is a fictional company. The data has been made available by Motivate International Inc. I have chosen data from January 2022 to December 2022. I used ***RStudio*** for data manupulation and ***Tableau*** to conduct the analysis and create visualisations and a dashboard.
 
 ---
 
@@ -55,7 +55,7 @@ str(data)
 class(data$started_at)
 class(data$ended_at)
 ```
-###### Changing variables started_at_as_date and ended_at_as_date to date type
+###### Changing variables started_at_as_date and ended_at_as_date to ***date type***
 ``` r
 data$started_at_as_date=dmy_hm(data$started_at)
 data$ended_at_as_date=dmy_hm(data$ended_at)
@@ -63,7 +63,7 @@ data$ended_at_as_date=dmy_hm(data$ended_at)
 class(data$started_at_as_date)
 class(data$ended_at_as_date)
 ```
-###### Creating a new variable ride_length_in_min for the ride duration in minutes
+###### Creating a new variable ***ride_length_in_min*** for the ride duration in minutes
 ``` r
 data$ride_length_in_min=as.numeric(data$ended_at_as_date-data$started_at_as_date,
                                    units="mins")
@@ -82,7 +82,7 @@ data=data %>%
   mutate(rideable_type=replace(rideable_type, rideable_type=="docked_bike", "docked"))
 ```
 
-######Generating descriptive statistics
+###### Generating descriptive statistics
 ###### Load packages for summary statistics, cleaning, and preprocessing data
 ``` r
 library(skimr)
@@ -109,7 +109,7 @@ data %>%
   group_by(member_casual) %>% 
   summarise(mean(ride_length_in_min), min(ride_length_in_min), max(ride_length_in_min))
 ```
-######Creating some data visualisations just for initial explonatory data analysis
+###### Creating some data visualisations just for initial explonatory data analysis
 
 
 ``` r
@@ -122,7 +122,7 @@ ggplot(data=data)+geom_bar(mapping=aes(x=week_day_as_date, fill=rideable_type))+
 ggplot(data=data)+geom_bar(mapping=aes(x=rideable_type))+
   facet_grid(~member_casual)
 ```
-##### Step 6: Saving and importing data to Tableau for furthure analysis and creating visualisations and a dashboard
+##### Saving and importing data to Tableau for furthure analysis and creating visualisations and a dashboard
 
 ```r
 write.csv(data, "C:\\Users\\Owner\\My_bikes_2022.csv", row.names=FALSE)
