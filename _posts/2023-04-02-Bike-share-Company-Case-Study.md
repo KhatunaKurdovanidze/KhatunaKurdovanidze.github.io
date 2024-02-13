@@ -130,13 +130,17 @@ write.csv(data, "C:\\Users\\Owner\\My_bikes_2022.csv", row.names=FALSE)
 
 ##### Step 3: Analysing data in Tableau and creating data visualisations
 ##### Insights after data analysis using Tableau
-Casual riders took 1M less trips than annual members in 2022, but spent 23% more time traveling with higher median and average trip duration. Annual members travel more often during weekdays (to work), while casual riders travel more often during the weekends (leisure). During weekdays, more annual members than casual riders start their trips at 8am, 12pm, and 5pm. Casual riders choose electric type more often, but ride classical type for longer, average trip time is bigger for docked type. My three recommendations are to create a weekend membership plan and market it to casual riders. Once a casual member subscribes and benefits from the weekend membership, market them an annual membership by showing them that it's actually beneficial for them. This could be done by sending them emails with their stats together with the offer and placing ads at dock stations and electric bikes because casual riders use them more
+Casual riders took 1M less trips than annual members in 2022, but spent 23% more time traveling with higher median and average trip duration. Annual members travel more often during weekdays (to work), while casual riders travel more often during the weekends (leisure). 
+![graph1](/img/posts/graph1.png "graph1")
 
+
+Casual riders choose electric type more often, but ride classical type for longer, average trip time is bigger for docked type. My three recommendations are to create a weekend membership plan and market it to casual riders. 
+![graph2](/img/posts/graph2.png "graph3")
 
 ##### My reccomendations
-1) Recognizing the business potential in the trend of casual riders taking more and longer trips during weekends, it is recommended to create a dedicated weekend membership plan tailored to their preferences. This strategic initiative has the potential to not only cater to their needs but also contribute to increased revenue and customer loyalty <br> 
-2) Capitalizing on Long-term Engagement: Subsequently, there is an opportunity to leverage the engagement of weekend plan members by introducing an annual membership option to them. This marketing strategy can be reinforced by elucidating the wide-ranging benefits of the annual membership, thereby fostering sustained customer commitment and driving revenue growth <br> 
-3) Targeted Marketing Strategy: Utilize the preference for electric and docked bikes among casual riders to place compelling ads promoting the benefits of an annual membership. This focused approach can attract more members, driving increased revenue
+1) Recognizing the business potential in the trend of casual riders taking more and longer trips during weekends, it is recommended to ***create a dedicated weekend membership plan*** tailored to their preferences. This strategic initiative has the potential to not only cater to their needs but also contribute to increased revenue and customer loyalty <br> 
+2) ***Capitalizing on Long-term Engagement***: Subsequently, there is an opportunity to leverage the engagement of weekend plan members by introducing an annual membership option to them. This marketing strategy can be reinforced by elucidating the wide-ranging benefits of the annual membership, thereby fostering sustained customer commitment and driving revenue growth <br> 
+3) Targeted Marketing Strategy: Utilize the preference for electric and docked bikes among casual riders to ***place compelling ads*** promoting the benefits of an annual membership. This focused approach can attract more members, driving increased revenue
 
 ##### Link to the Tableau dashboard
 
