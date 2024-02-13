@@ -103,26 +103,16 @@ data=filter(data, ride_length_in_min>=3)
 data=filter(data, ride_length_in_min<=1440)
 ```
 
-###### Some stats
-``` r
-data %>% 
-  group_by(member_casual) %>% 
-  summarise(mean(ride_length_in_min), min(ride_length_in_min), max(ride_length_in_min))
-```
 ###### Creating some data visualisations just for initial explonatory data analysis
-
 
 ``` r
 ggplot(data=data)+geom_bar(mapping=aes(x=week_day_as_date, fill=rideable_type))+
   facet_grid(~member_casual)
-```
 
-###### Plot bar charts for different riders (casual and member) and different rideable_type (classic, docked, electric)
-``` r
 ggplot(data=data)+geom_bar(mapping=aes(x=rideable_type))+
   facet_grid(~member_casual)
 ```
-##### Saving and importing data to Tableau for furthure analysis and creating visualisations and a dashboard
+##### Saving and importing data to Tableau for furthure analysis, creating visualisations, and a dashboard
 
 ```r
 write.csv(data, "C:\\Users\\Owner\\My_bikes_2022.csv", row.names=FALSE)
