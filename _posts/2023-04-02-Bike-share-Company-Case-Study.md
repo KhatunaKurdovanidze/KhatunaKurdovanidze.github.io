@@ -5,7 +5,7 @@ image: "/posts/photo-bikes.jpg"
 tags: [R, RStudio,Tableau]
 ---
 
-This is a case study I have done in order to obtain my Google Data Analyst Professional Certificate. Scenario: It's about Cyclistic, a bike-share company in Chicago. There are three plans available: Single Ride - $3.30/trip (one trip up to 30 minutes), Day Pass - $15/day (unlimited 3-hour rides in 24-hour period), and Annual Membership - $9/month ($108 billed upfront annually for unlimited 45-min rides). There are three types of bikes: classical, electric, and docked. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. My task was to answer the question "How do annual members and casual riders use Cyclistic bikes differently?" and come up with three recommendations based on my analysis. From these insights, the team will design a new marketing strategy to convert casual riders into annual members. Cyclistic is a fictional company. The data has been made available by Motivate International Inc. I have chosen data from January 2022 to December 2022. I used RStudio for data manupulation and Tableau to conduct the analysis and create visualisations and a dashboard.
+This is a case study I have done in order to obtain my Google Data Analyst Professional Certificate. Scenario: It's about Cyclistic, a bike-share company in Chicago. There are three types of bikes: classical, electric, and docked. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. My task was to answer the question "How do annual members and casual riders use Cyclistic bikes differently?" and come up with three recommendations based on my analysis. From these insights, the team will design a new marketing strategy to convert casual riders into annual members. Cyclistic is a fictional company. The data has been made available by Motivate International Inc. I have chosen data from January 2022 to December 2022. I used RStudio for data manupulation and Tableau to conduct the analysis and create visualisations and a dashboard.
 
 ---
 
@@ -55,7 +55,7 @@ str(data)
 class(data$started_at)
 class(data$ended_at)
 ```
-###### Changind variables started_at_as_date and ended_at_as_date to date type
+###### Changing variables started_at_as_date and ended_at_as_date to date type
 ``` r
 data$started_at_as_date=dmy_hm(data$started_at)
 data$ended_at_as_date=dmy_hm(data$ended_at)
@@ -63,16 +63,16 @@ data$ended_at_as_date=dmy_hm(data$ended_at)
 class(data$started_at_as_date)
 class(data$ended_at_as_date)
 ```
-###### Create a new variable ride_length_in_min for the ride duration in minutes
+###### Creating a new variable ride_length_in_min for the ride duration in minutes
 ``` r
 data$ride_length_in_min=as.numeric(data$ended_at_as_date-data$started_at_as_date,
                                    units="mins")
 ```
-###### Create a new variable week_day_as_date to see the week day of the start of the trips
+###### Creating a new variable week_day_as_date to see the week day of the start of the trips
 ``` r
 data$week_day_as_date=wday(data$started_at_as_date,label=TRUE, abbr=TRUE)
 ```
-###### Change categories of the rideable_type variable to classic, electric, and docked
+###### Changing categories of the rideable_type variable to classic, electric, and docked
 ``` r
 data=data %>% 
   mutate(rideable_type=replace(rideable_type, rideable_type=="classic_bike", "classic"))
@@ -82,7 +82,7 @@ data=data %>%
   mutate(rideable_type=replace(rideable_type, rideable_type=="docked_bike", "docked"))
 ```
 
-##### Step 3: Generate descriptive statistics
+##### Step 4: Generating descriptive statistics
 ###### Load packages for summary statistics, cleaning, and preprocessing data
 ``` r
 library(skimr)
@@ -109,7 +109,7 @@ data %>%
   group_by(member_casual) %>% 
   summarise(mean(ride_length_in_min), min(ride_length_in_min), max(ride_length_in_min))
 ```
-##### Step 4: Creating some data visualisations just for initial explonatory data analysis
+##### Step 5: Creating some data visualisations just for initial explonatory data analysis
 
 ###### Create visualizations
 ``` r
@@ -122,13 +122,13 @@ ggplot(data=data)+geom_bar(mapping=aes(x=week_day_as_date, fill=rideable_type))+
 ggplot(data=data)+geom_bar(mapping=aes(x=rideable_type))+
   facet_grid(~member_casual)
 ```
-##### Step 5: Saving and importing data to Tableau for furthure analysis and creating visualisations and a dashboard
+##### Step 6: Saving and importing data to Tableau for furthure analysis and creating visualisations and a dashboard
 
 ```r
 write.csv(data, "C:\\Users\\Owner\\My_bikes_2022.csv", row.names=FALSE)
 ```
 
-
+##### Step 7: Analysing data in Tableau
 ##### Insights after data analysis using Tableau
 Casual riders took 1M less trips than annual members in 2022, but spent 23% more time traveling with higher median and average trip duration. Annual members travel more often during weekdays (to work), while casual riders travel more often during the weekends (leisure). During weekdays, more annual members than casual riders start their trips at 8am, 12pm, and 5pm. Casual riders choose electric type more often, but ride classical type for longer, average trip time is bigger for docked type. My three recommendations are to create a weekend membership plan and market it to casual riders. Once a casual member subscribes and benefits from the weekend membership, market them an annual membership by showing them that it's actually beneficial for them. This could be done by sending them emails with their stats together with the offer and placing ads at dock stations and electric bikes because casual riders use them more
 
