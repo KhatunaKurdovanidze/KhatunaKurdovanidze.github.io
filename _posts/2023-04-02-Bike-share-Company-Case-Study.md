@@ -9,16 +9,16 @@ This is a case study I have done in order to obtain my Google Data Analyst Profe
 
 ---
 
-##### Step 1: Importing required packages in RStudio
+##### Step 1: Importing Data
+Data was downloaded from the following 
+[link](https://divvy-tripdata.s3.amazonaws.com/index.html)
+
+Importing required packages in RStudio
 
 ``` r
 library(tidyverse)
 library(ggplot2)
 ```
-
-##### Step 2: Importing Data
-Data was downloaded from the following 
-[link](https://divvy-tripdata.s3.amazonaws.com/index.html)
 
 ###### Load 12 datasets correspoding to 12 months
 ``` r
@@ -35,7 +35,7 @@ data10=read.csv("trips_oct_22.csv")
 data11=read.csv("trips_nov_22.csv")
 data12=read.csv("trips_dec_22.csv")
 ```
-##### Step 3: Data preparation
+##### Step 2: Data preparation
 ###### Load packages for data manipulation and handling dates and times
 ``` r
 library("dplyr")
@@ -82,7 +82,7 @@ data=data %>%
   mutate(rideable_type=replace(rideable_type, rideable_type=="docked_bike", "docked"))
 ```
 
-##### Step 4: Generating descriptive statistics
+######Generating descriptive statistics
 ###### Load packages for summary statistics, cleaning, and preprocessing data
 ``` r
 library(skimr)
@@ -109,9 +109,9 @@ data %>%
   group_by(member_casual) %>% 
   summarise(mean(ride_length_in_min), min(ride_length_in_min), max(ride_length_in_min))
 ```
-##### Step 5: Creating some data visualisations just for initial explonatory data analysis
+######Creating some data visualisations just for initial explonatory data analysis
 
-###### Create visualizations
+
 ``` r
 ggplot(data=data)+geom_bar(mapping=aes(x=week_day_as_date, fill=rideable_type))+
   facet_grid(~member_casual)
@@ -128,7 +128,7 @@ ggplot(data=data)+geom_bar(mapping=aes(x=rideable_type))+
 write.csv(data, "C:\\Users\\Owner\\My_bikes_2022.csv", row.names=FALSE)
 ```
 
-##### Step 7: Analysing data in Tableau
+##### Step 3: Analysing data in Tableau and creating data visualisations
 ##### Insights after data analysis using Tableau
 Casual riders took 1M less trips than annual members in 2022, but spent 23% more time traveling with higher median and average trip duration. Annual members travel more often during weekdays (to work), while casual riders travel more often during the weekends (leisure). During weekdays, more annual members than casual riders start their trips at 8am, 12pm, and 5pm. Casual riders choose electric type more often, but ride classical type for longer, average trip time is bigger for docked type. My three recommendations are to create a weekend membership plan and market it to casual riders. Once a casual member subscribes and benefits from the weekend membership, market them an annual membership by showing them that it's actually beneficial for them. This could be done by sending them emails with their stats together with the offer and placing ads at dock stations and electric bikes because casual riders use them more
 
