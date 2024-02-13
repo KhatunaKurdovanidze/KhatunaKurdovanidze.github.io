@@ -120,7 +120,11 @@ write.csv(data, "C:\\Users\\Owner\\My_bikes_2022.csv", row.names=FALSE)
 
 ##### Step 3: Analysing data in Tableau and creating data visualisations
 ##### Insights after data analysis using Tableau
-Casual riders took 1M less trips than annual members in 2022, but spent 23% more time traveling with higher median and average trip duration. Annual members travel more often during weekdays (to work), while casual riders travel more often during the weekends (leisure). 
+Casual riders took 1M less trips than annual members in 2022, but spent 23% more time traveling with higher median and average trip duration. 
+![graph4](/img/posts/graph4.png "graph4")
+During weekdays, more annual members than casual riders start their trips at 8am, 12pm, and 5pm.
+![graph3](/img/posts/graph3.png "graph3")
+Annual members travel more often during ***weekdays (to work)***, while casual riders travel more often during the ***weekends (leisure)***. 
 ![graph1](/img/posts/graph1.png "graph1")
 
 
@@ -138,7 +142,7 @@ Casual riders choose electric type more often, but ride classical type for longe
 
 ---
 
-Photo source: Ankush Minda/Unsplash
+Banner photo source: Ankush Minda/Unsplash
 
 
 
