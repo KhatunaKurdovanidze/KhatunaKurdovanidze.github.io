@@ -6,7 +6,7 @@ tags: [SQL, Data Analysis]
 ---
 
 I used ***SQL Workbench/J*** to help the business answer questions about their total sales, best customers, and the total sales for each product area. This information can be used to support strategic decisions or to report latest results to stakeholders. This information can be used to support strategic decisions or to report latest results to stakeholders. 
-(I have more SQL queries in my SQL repository, please follow this link)
+(I have more SQL queries in my SQL repository, please follow this [link](https://github.com/KhatunaKurdovanidze/SQL-Queries-Using-BigQuery-Public-Data))
 
 ---
 
